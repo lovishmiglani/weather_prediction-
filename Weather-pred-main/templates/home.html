@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="/static/predict.js"></script>
+    <title>home_page</title>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          color: #f4f4f4;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-image: url('/static/bg5.jpg');
+          background-size: cover;
+          text-shadow: 0 0 70px #efff00;
+          height: 100vh;
+      }
+
+      #prediction-form {
+          background-size: cover;
+          padding: 20px;
+          border-radius: 8px;
+          background-image: url('/static/hbg.jpg');
+          box-shadow: 0 0px 68px rgb(255 235 189);
+          width: max-content;
+          text-align: center;
+      }
+
+      input {
+          width: 100%;
+          padding: 8px;
+          margin-bottom: 10px;
+          box-sizing: border-box;
+      }
+
+      button {
+          background-color: #4caf50;
+          color: white;
+          padding: 10px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          width: 100%;
+      }
+
+      #result {
+          color: #bd2130;
+          margin-top: 20px;
+          font-weight: bold;
+      }
+  </style>
+  </head>
+  <body>
+    <div id="prediction-form">
+      <h2>Welcome to WeatherWise Pro</h2>
+      <p>Weather prediction at your fingertips!</p>
+      <form id="weather-form">
+          <label for="precipitation">Precipitation:</label>
+          <input type="number" step="0.01" name="precipitation" required><br>
+
+          <label for="temp_max">Max Temperature:</label>
+          <input type="number" step="0.01" name="temp_max" required><br>
+
+          <label for="temp_min">Min Temperature:</label>
+          <input type="number" step="0.01" name="temp_min" required><br>
+
+          <label for="wind">Wind:</label>
+          <input type="number" step="0.01" name="wind" required><br>
+
+          <button type="button" onclick="predictWeather()">Predict</button>
+      </form>
+
+      <div id="result"></div>
+    </div>
+    <!-- <h1>Welcome to WeatherWise Pro</h1>
+    <p>Weather prediction at your fingertips!</p> -->
+    
+  </body>
+</html>

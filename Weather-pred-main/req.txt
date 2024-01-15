@@ -1,0 +1,12 @@
+matplotlib
+seaborn
+scipy
+numpy
+scikit-learn
+missingno
+xgboost
+pandas
+warnings
+pickle
+fastapi
+pydantic
